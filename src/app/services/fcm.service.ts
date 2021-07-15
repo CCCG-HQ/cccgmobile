@@ -2,11 +2,12 @@ import { Injectable } from '@angular/core';
 
 import {
   Plugins,
+  Capacitor,
   PushNotification,
   PushNotificationToken,
   PushNotificationActionPerformed,
-  Capacitor,
 } from '@capacitor/core';
+
 import { Router } from '@angular/router';
 
 const { PushNotifications } = Plugins;
