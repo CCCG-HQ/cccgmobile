@@ -1,0 +1,23 @@
+ion-content{
+    --ion-background-color:white;
+    --ion-text-color: black;
+    --ion-font-family: 'Roboto' sans-serif;
+}
+
+
+ion-header {
+    --ion-background-color:white;
+}
+
+
+ion-menu-button {
+    color: black;
+}
+
+ion-title {
+    --ion-font-family: 'Roboto', sans-serif !important;
+    font-family: 'Roboto', sans-serif !important;
+    font-weight: 900;
+    font-size: 22px;
+    color: black;
+}

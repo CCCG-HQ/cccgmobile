@@ -1,0 +1,65 @@
+<ion-header translucent="true">
+  <ion-toolbar>
+      <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>My CCCG Testimony</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form>
+    <ion-item lines="full">
+      <ion-label position="floating">First name:</ion-label>
+      <br>
+      <ion-input type="text" [(ngModel)]="first" [ngModelOptions]="{standalone: true}" required></ion-input>
+    </ion-item>
+    <br>
+    <ion-item lines="full">
+      <ion-label position="floating">Last name:</ion-label>
+      <ion-input type="text" [(ngModel)]="last" [ngModelOptions]="{standalone: true}" required></ion-input>
+    </ion-item>
+    <br>
+    <ion-item lines="full">
+      <ion-label position="floating">Email:</ion-label>
+      <ion-input type="text" [(ngModel)]="email" [ngModelOptions]="{standalone: true}" required></ion-input>
+    </ion-item>
+    <br>
+    <ion-item lines="full">
+      <ion-label position="floating">Phone Number:</ion-label>
+      <ion-input type="text" [(ngModel)]="phone" [ngModelOptions]="{standalone: true}" required></ion-input>
+    </ion-item>
+    <br>
+    <ion-item lines="full">
+      <ion-label position="floating">Testimony:</ion-label>
+      <ion-textarea [(ngModel)]="summary" [ngModelOptions]="{standalone: true}" required></ion-textarea>
+    </ion-item>
+
+    <br>
+
+    <ion-radio-group allow-empty-selection value="onstage"  [(ngModel)]="StageOrLive" [ngModelOptions]="{standalone: true}" >
+      <ion-list-header>
+        <ion-label>I would like: </ion-label>
+      </ion-list-header>
+      <ion-item>
+        <ion-label>To deliver my testimony myself</ion-label>
+        <ion-radio slot="end" color="primary" value="myself" id="myself"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>My testimony read out for me</ion-label>
+        <ion-radio slot="end" color="secondary" value="onstage" id="onstage"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+
+    <br>
+    <br>
+    <br>
+
+    <ion-row>
+      <ion-col></ion-col>
+      <ion-col><ion-button (click)=submit() type="submit" size="large">Submit!</ion-button></ion-col>
+      <ion-col></ion-col>
+    </ion-row>
+  </form>
+</ion-content>

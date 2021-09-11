@@ -1,3 +1,99 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-split-pane contentId="main-content">
+
+    <ion-menu contentId="main-content">
+      <ion-content>
+        <!-- <ion-list lines="none">
+          <ion-list-header style="color:white">
+            Publications
+          </ion-list-header>
+          
+          <ion-menu-toggle autoHide="false">
+            <ion-item (click)="goToNuggets()">
+              <ion-icon slot="start" name="book" color="white"></ion-icon>
+              <ion-label>
+                The Golden Nuggets Blog
+              </ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+
+          <ion-menu-toggle autoHide="false">
+            <ion-item (click)="openWebPage('https://mailchi.mp/6358c2c3eeb1/cccgalive-8115357')">
+              <ion-icon slot="start" name="bookmarks" color="white"></ion-icon>
+              <ion-label>
+                The CCCG Buzz
+              </ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+
+        </ion-list> -->
+
+        <ion-list lines="none">
+          <ion-list-header style="color:black">
+            Connect with Us
+          </ion-list-header>
+
+          <ion-menu-toggle autoHide="false">
+            <ion-item (click)="goHome()">
+              <ion-icon slot="start" name="home" color="white"></ion-icon>
+              <ion-label>
+                Home
+              </ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+
+          <ion-menu-toggle autoHide="false">
+            <!--<ion-item routerLink="/askpastor" routerLinkActive="active" routerDirection="root" detail="false">-->
+            <ion-item (click)="openWebPage('https://app.sli.do/event/e8dxz7ih/live/questions')">
+              <ion-icon slot="start" name="clipboard" color="purple"></ion-icon>
+              <ion-label>
+                Ask Pastor E
+              </ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+
+          <ion-menu-toggle autoHide="false">
+            <ion-item routerLink="/ride" routerLinkActive="active" routerDirection="root" detail="false">
+              <ion-icon slot="start" name="car" color="purple"></ion-icon>
+              <ion-label>
+                Request a Ride
+              </ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+
+          <ion-menu-toggle autoHide="false">
+            <ion-item routerLink="/bookmeeting" routerLinkActive="active" routerDirection="root" detail="false">
+              <ion-icon slot="start" name="calendar" color="purple"></ion-icon>
+              <ion-label>
+                Book a Meeting
+              </ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+
+          <ion-menu-toggle autoHide="false">
+            <ion-item (click)="goToTestimonies()">
+              <ion-icon slot="start" name="people" color="purple"></ion-icon>
+              <ion-label>
+                Submit a Testimony!
+              </ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+
+          <ion-menu-toggle autoHide="false">
+            <ion-item routerLink="/feedback" routerLinkActive="active" routerDirection="root" detail="false">
+              <ion-icon slot="start" name="bulb" color="purple"></ion-icon>
+              <ion-label>
+                Feedback/Feature Request
+              </ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+
+       </ion-list>
+      </ion-content>
+    </ion-menu>
+
+    <ion-router-outlet id="main-content"></ion-router-outlet>
+
+  </ion-split-pane>
+
 </ion-app>

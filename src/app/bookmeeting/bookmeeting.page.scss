@@ -1,0 +1,52 @@
+ion-content{
+    --ion-background-color:white;
+    --ion-text-color: black;
+    --ion-font-family: 'Roboto' sans-serif;
+}
+
+
+ion-header {
+    --ion-background-color:white;
+}
+
+
+ion-menu-button {
+    color:black;
+}
+
+ion-title {
+    --ion-font-family: 'Roboto', sans-serif !important;
+    font-family: 'Roboto', sans-serif !important;
+    font-weight: 900;
+    font-size: 22px;
+    color: black;
+}
+
+ion-card-subtitle {
+    --ion-font-family: 'Roboto'!important;
+    font-family: 'Roboto' !important;
+    font-weight: bold;
+    font-size:x-small;
+    color: black;
+}
+
+ ion-card-title {
+    --ion-font-family: 'Roboto'!important;
+    font-family: 'Roboto' !important;
+    padding-left: 15px;
+    font-weight: normal;
+    //font-size: 24px;
+    color: black;
+} 
+
+ion-card-content {
+    color: black;
+}
+
+ion-card-title.top {
+    --ion-font-family: 'Roboto'!important;
+    font-family: 'Roboto' !important;
+    font-weight: bold;
+    font-size: 40px;
+    color: black;
+}

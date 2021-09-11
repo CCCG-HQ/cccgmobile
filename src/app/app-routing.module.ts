@@ -11,8 +11,36 @@ const routes: Routes = [
     loadChildren: () => import('./events/events.module').then( m => m.EventsPageModule)
   },
   {
-    path: 'watch',
-    loadChildren: () => import('./watch/watch.module').then( m => m.WatchPageModule)
+    path: 'testimony',
+    loadChildren: () => import('./testimony/testimony.module').then( m => m.TestimonyPageModule)
+  },
+  {
+    path: 'bookmeeting',
+    loadChildren: () => import('./bookmeeting/bookmeeting.module').then( m => m.BookmeetingPageModule)
+  },
+  {
+    path: 'ride',
+    loadChildren: () => import('./ride/ride.module').then( m => m.RidePageModule)
+  },
+  {
+    path: 'askpastor',
+    loadChildren: () => import('./askpastor/askpastor.module').then( m => m.AskpastorPageModule)
+  },
+  {
+    path: 'buzz',
+    loadChildren: () => import('./buzz/buzz.module').then( m => m.BuzzPageModule)
+  },
+  {
+    path: 'nuggets',
+    loadChildren: () => import('./nuggets/nuggets.module').then( m => m.NuggetsPageModule)
+  },
+  {
+    path: 'playvid',
+    loadChildren: () => import('./playvid/playvid.module').then( m => m.PlayvidPageModule)
+  },
+  {
+    path: 'feedback',
+    loadChildren: () => import('./feedback/feedback.module').then( m => m.FeedbackPageModule)
   }
 ];
 @NgModule({
