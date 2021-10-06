@@ -47,7 +47,7 @@ export class RidePage implements OnInit {
     "Service : " + this.service + '\n';
 
 
-    alert(body);
+    //alert(body);
 
 
     Email.send({

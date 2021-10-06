@@ -3,18 +3,12 @@
       <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
       </ion-buttons>
+      <ion-title>Latest at CCCG</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content fullscreen>
-  <!-- <ion-grid>
-    <ion-row>
-      <ion-col>
-        <ion-button expand="full" (click)="simpleNotif()">Generate</ion-button>
-      </ion-col>
-    </ion-row>
-  </ion-grid> -->
-  <ion-toolbar>
+  <!-- <ion-toolbar>
     <ion-segment color="primary"  [(ngModel)]="type"  (ionChange)="segmentChanged($event)" scrollable>
       <ion-segment-button value="sermons" checked>
         <ion-label class="segment">Sermons</ion-label>
@@ -23,26 +17,18 @@
         <ion-label class="segment">Broadcasts</ion-label>
       </ion-segment-button>
     </ion-segment>
-  </ion-toolbar>
+  </ion-toolbar> -->
 
   <div *ngIf="dataload">
-  <div [ngSwitch]="type">
-    <ion-list *ngSwitchCase="'sermons'">
+  <!-- <div [ngSwitch]="type"> -->
+    <ion-list>
       <!-- <ion-searchbar style ="color:white" autocomplete="on" debounce="888" animated [(ngModel)]="searchModel" (ionClear)="videos =[]" (ionChange)=
       "search()"></ion-searchbar> -->
       
-      <ion-list-header>Latest Sermon</ion-list-header>
-      
-      <ion-item lines="none">
-        <ion-card (click)="itemTapped(database.latestVideo.videoId, database.latestVideo.videoTitle,database.latestVideo.videoPub)">
-          <img [src]="database.latestVideo.videoImg" />
-        </ion-card>
-      </ion-item>
-      
-      <ion-list-header>Recent Sermons</ion-list-header>
+      <ion-list-header>Sunday Services</ion-list-header>
 
       <ion-slides pager="false" [options]="slideOpts">
-        <ion-slide *ngFor="let video of database.videos">
+        <ion-slide *ngFor="let video of database.SundayVideos">
           <ion-card (click)="itemTapped(video.videoId, video.videoTitle, video.videoPub)">
             <img [src]="video.videoImg" style="object-fit: fill;" />
             <ion-card-header>
@@ -50,99 +36,38 @@
             </ion-card-header>
           </ion-card>
         </ion-slide>
-      </ion-slides>
+      </ion-slides>   
 
       <ion-list>
-        <ion-list-header>Powerful Sermons from the Past </ion-list-header>
+        <ion-list-header>Ask Pastor E</ion-list-header>
 
-      <ion-item *ngFor="let oldVideo of database.oldVideos" lines="none">
+      <ion-item *ngFor="let oldVideo of database.TuesdayVideo" lines="none">
           <ion-card (click)="itemTapped(oldVideo.videoId, oldVideo.videoTitle, oldVideo.videoPub)">
             <img [src]="oldVideo.videoImg" style="object-fit: fill;" />
           </ion-card>
         </ion-item>
       </ion-list>
 
+    <ion-list>
+      <ion-list-header>Bible Study</ion-list-header>
+
+    <ion-item *ngFor="let oldVideo of database.ThursdayVideo" lines="none">
+        <ion-card (click)="itemTapped(oldVideo.videoId, oldVideo.videoTitle, oldVideo.videoPub)">
+          <img [src]="oldVideo.videoImg" style="object-fit: fill;" />
+        </ion-card>
+      </ion-item>
     </ion-list>
 
-    <ion-list *ngSwitchCase="'latest'">
-      <ion-text color="white">
-        <div *ngIf="database.liveVideo.count==1">
-          <ion-list>    
-            <h3 style="padding-left: 10px;">We are Live right now!</h3>
-            <ion-item lines="none">
-                <ion-card (click)="itemTapped(database.liveVideo.videoId, database.liveVideo.videoTitle,database.liveVideo.videoPub)">
-                  <img [src]="database.liveVideo.videoImg" style="object-fit: fill;" />
-                </ion-card>
-            </ion-item>
-          </ion-list>
-        </div>
-        <div *ngIf="database.latestVideo.count==1 && database.liveVideo.count==0">
-          <ion-list>    
-            <h3 class="ion-padding-start">Watch our Latest Service</h3>
-            <ion-item lines="none">
-                <ion-card (click)="itemTapped(database.latestVideo.videoId, database.latestVideo.videoTitle,database.latestVideo.videoPub)">
-                  <img [src]="database.latestVideo.videoImg" style="object-fit: fill;" />
-                </ion-card>
-            </ion-item>
-          </ion-list>
-        </div>
-      </ion-text>
-      <ion-text color="white">
-        <h3 class="ion-padding-start">Listen to our latest Podcast Episode</h3>
-        <br>
-      </ion-text>
-      <iframe class="ion-padding-start" src="https://open.spotify.com/embed/show/0sj3zVfd8YfWSKgiXujitn?theme=0" 
-      width="90%" height="152" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+    <ion-list>
+      <ion-list-header>Friday Night Prayers</ion-list-header>
+
+    <ion-item *ngFor="let oldVideo of database.FridayPrayersVideo" lines="none">
+        <ion-card (click)="itemTapped(oldVideo.videoId, oldVideo.videoTitle, oldVideo.videoPub)">
+          <img [src]="oldVideo.videoImg" style="object-fit: fill;" />
+        </ion-card>
+      </ion-item>
     </ion-list>
-  </div>
-</div>
 
-  <!--
-  <ion-card class="ion-no-margin">
-    <img src="../../assets/images/cccgheader2.png" />
-  </ion-card>
-
-  <ion-list>
-    <ion-list-header>
-      EXPERIENCE CCCG
-    </ion-list-header>
-
-    <ion-item href="https://www.youtube.com/channel/UCP7vi_uJF52wJ9d-oWdVVkA">
-      <ion-avatar slot="start">
-        <img src="../../assets/images/youtube.png">
-      </ion-avatar>
-      <ion-label>
-        <h2>Watch our Services</h2>
-      </ion-label>
-    </ion-item>
-
-    <ion-item href="https://cccghq.squarespace.com/golden-nugget/2021/4/23/dealing-with-wounds">
-      <ion-avatar slot="start">
-        <img src="../../assets/images/read.png">
-      </ion-avatar>
-      <ion-label>
-        <h2>Read the Latest Nuggets Blog!</h2>
-      </ion-label>
-    </ion-item>
-
-    <ion-item href="https://www.cccghq.org/new-guest">
-      <ion-avatar slot="start">
-        <img src="../../assets/images/join.png">
-      </ion-avatar>
-      <ion-label>
-        <h2>Join CCCG!</h2>
-      </ion-label>
-    </ion-item>
-
-    <ion-item href="https://www.cccghq.org/testimonies">
-      <ion-avatar slot="start">
-        <img src="../../assets/images/happy.png">
-      </ion-avatar>
-      <ion-label>
-        <h2>Share a Testimony</h2>
-      </ion-label>
-    </ion-item>
   </ion-list>
-  -->
-
+</div>
 </ion-content>

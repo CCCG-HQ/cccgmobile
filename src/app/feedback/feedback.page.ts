@@ -43,7 +43,7 @@ export class FeedbackPage implements OnInit {
     "Feedback/Feature Request : " + this.feedture + '\n';
 
 
-    alert(body);
+    //alert(body);
 
 
     Email.send({

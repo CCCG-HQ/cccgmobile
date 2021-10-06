@@ -1,0 +1,83 @@
+<ion-header translucent="true">
+  <ion-toolbar>
+      <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+
+  <ion-toolbar>
+    <ion-segment color="primary"  [(ngModel)]="type"  (ionChange)="segmentChanged($event)" scrollable>
+      <ion-segment-button value="sermons" checked>
+        <ion-label class="segment">About Us</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="latest">
+        <ion-label class="segment">Broadcasts</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+
+  <div *ngIf="dataload">
+  <div [ngSwitch]="type">
+    <ion-list *ngSwitchCase="'sermons'">
+      <h3 class="top">Welcome to CCCG</h3>
+      <p style="padding-left: 20px;">Home of Restoration and Transformation</p>
+    
+      <ion-card (click)="openWebPage('https://www.cccghq.org/our-story')">
+        <img src="../../assets/images/ourstory.png" style="object-fit: fill;" />
+        <ion-card-title>Who are we?</ion-card-title>
+        <ion-card-content>
+          Find out all about CCCG!
+        </ion-card-content>
+      </ion-card>
+    
+      <br />
+    
+      <ion-card (click)="openWebPage('https://www.cccghq.org/our-pastors')">
+        <img src="../../assets/images/ourpastors.png" style="object-fit: fill;"  />
+        <ion-card-title>See our pastors!</ion-card-title>
+        <ion-card-content>
+          Say hello to Pastor Emmanuel & Pastor Ibukun
+        </ion-card-content>
+      </ion-card>
+    
+      <br />
+      <br />
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'latest'">
+      <ion-text color="white">
+        <div *ngIf="database.liveVideo.count==1">
+          <ion-list>    
+            <h3 style="padding-left: 10px;">We are Live right now!</h3>
+            <ion-item lines="none">
+                <ion-card (click)="itemTapped(database.liveVideo.videoId, database.liveVideo.videoTitle,database.liveVideo.videoPub)">
+                  <img [src]="database.liveVideo.videoImg" style="object-fit: fill;" />
+                </ion-card>
+            </ion-item>
+          </ion-list>
+        </div>
+        <div *ngIf="database.latestVideo.count==1 && database.liveVideo.count==0">
+          <ion-list>    
+            <h3 class="ion-padding-start">Watch our Latest Service</h3>
+            <ion-item lines="none">
+                <ion-card (click)="itemTapped(database.latestVideo.videoId, database.latestVideo.videoTitle,database.latestVideo.videoPub)">
+                  <img [src]="database.latestVideo.videoImg" style="object-fit: fill;" />
+                </ion-card>
+            </ion-item>
+          </ion-list>
+        </div>
+      </ion-text>
+      <ion-text color="white">
+        <h3 class="ion-padding-start">Listen to our latest Podcast Episode</h3>
+        <br>
+      </ion-text>
+      <iframe class="ion-padding-start" src="https://open.spotify.com/embed/show/0sj3zVfd8YfWSKgiXujitn?theme=0" 
+      width="90%" height="152" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+    </ion-list>
+  </div>
+</div>
+
+</ion-content>

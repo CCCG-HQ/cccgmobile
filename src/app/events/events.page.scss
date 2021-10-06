@@ -1,34 +1,3 @@
-ion-title {
-    --ion-font-family: 'Roboto', sans-serif !important;
-    font-family: 'Roboto', sans-serif !important;
-    font-weight: 900;
-    font-size: 22px;
-    color:black;
-}
-
-
-ion-content{
-    --ion-background-color:white;
-    --ion-text-color: black;
-    --ion-font-family: 'Roboto' sans-serif;
-}
-
-ion-text {
-    --ion-font-family: 'Roboto'!important;
-    font-family: 'Roboto' !important;
-    font-weight: bold;
-    font-size:large;
-    color: black;
-}
-
-ion-text.date {
-    --ion-font-family: 'Roboto'!important;
-    font-family: 'Roboto' !important;
-    font-weight: normal;
-    font-size:small;
-    color: black;
-}
-
 ion-header {
     --ion-background-color:white;
 }
@@ -40,6 +9,67 @@ ion-menu-button {
 ion-content{
 
     --ion-background-color:white;
+    --ion-text-color: #black;
+    --ion-font-family: 'Roboto' sans-serif;
+}
+
+ion-content{
+
+    --ion-background-color:white;
     --ion-text-color: black;
     --ion-font-family: 'Roboto' sans-serif;
+}
+
+ion-card-subtitle {
+    --ion-font-family: 'Roboto'!important;
+    font-family: 'Roboto' !important;
+    font-weight: bold;
+    font-size:x-small;
+    color: black;
+}
+
+ ion-card-title {
+    --ion-font-family: 'Roboto'!important;
+    font-family: 'Roboto' !important;
+    padding-left: 15px;
+    font-weight: normal;
+    //font-size: 24px;
+    color: black;
+} 
+
+ion-card-content {
+    color: black;
+}
+
+ion-card-title.top {
+    --ion-font-family: 'Roboto'!important;
+    font-family: 'Roboto' !important;
+    font-weight: bold;
+    font-size: 40px;
+    color: black;
+}
+
+h3 {
+    --ion-font-family: 'Roboto', sans-serif !important;
+    font-style: normal;
+    font-family: 'Roboto', sans-serif !important;
+    font-weight: 900;
+    font-size: 40px;
+    padding-left: 20px;
+}
+
+p {
+    --ion-font-family: 'Roboto', sans-serif !important;
+    font-style: normal;
+    font-family: 'Roboto', sans-serif !important;
+    font-weight: 900;
+    font-size: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+ion-card {
+    width:90%; // adjust width on your ion-card suitable on your screen
+    display:block;
+    margin: 0 auto;
 }

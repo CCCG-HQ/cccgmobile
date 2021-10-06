@@ -52,7 +52,7 @@ export class TestimonyPage implements OnInit {
     "Live or On Stage: " + this.StageOrLive;
 
 
-    alert(body);
+    //alert(body);
 
 
     Email.send({
