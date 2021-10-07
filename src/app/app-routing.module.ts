@@ -45,6 +45,10 @@ const routes: Routes = [
   {
     path: 'home',
     loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+  },
+  {
+    path: 'testimonybank',
+    loadChildren: () => import('./testimonybank/testimonybank.module').then( m => m.TestimonybankPageModule)
   }
 ];
 @NgModule({

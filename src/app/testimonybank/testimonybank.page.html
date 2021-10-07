@@ -1,0 +1,45 @@
+<ion-header translucent="true">
+  <ion-toolbar>
+      <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>The Testimony Bank</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <img src="../../assets/images/testimonybank.png" style="object-fit: fill;" />
+    <ion-card-title></ion-card-title>
+    <ion-card-content>
+      At CCCG we LOVE testimonies. We thank God for all the wonderful things He has done and keeps doing for us, and now we want you to be encouraged.
+
+      Use the testimony bank and be encouraged as you see all the times we thanked the Lord for His marvelous deeds!
+    </ion-card-content>
+  </ion-card>
+
+  <form>
+    <ion-item lines="full">
+      <ion-label position="floating">Testimony Type:</ion-label>
+      <ion-select value="" name="testimonytypes" [(ngModel)]="testtype"  (ionChange)="runFunc()" okText="Okay" cancelText="Dismiss">
+        <ion-select-option value="acad">Academic Success</ion-select-option>
+        <ion-select-option value="deliverance">Deliverance</ion-select-option>
+        <ion-select-option value="finebreak">Finances</ion-select-option>
+        <ion-select-option value="favor">Favor</ion-select-option>
+        <ion-select-option value="healing">Healing</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-label position="floating">Testimonies:</ion-label>
+      <br>
+      <ion-textarea [(ngModel)]="testimonies" name="listoftestimonies" autoGrow="true" readonly="true"></ion-textarea>
+    </ion-item>
+    <br>
+    
+
+    <br>
+    <br>
+    <br>
+  </form>
+</ion-content>

@@ -1,0 +1,27 @@
+ion-header {
+    // --ion-background-color:#2D3338;
+    --ion-background-color: white;
+ }
+ 
+ ion-menu-button {
+     color: black;
+ }
+ 
+ ion-content{
+ 
+     --ion-background-color: white;
+     --ion-text-color:black;
+     --ion-font-family: 'Roboto' sans-serif;
+ }
+ 
+ ion-title {
+     --ion-font-family: 'Roboto', sans-serif !important;
+     font-family: 'Roboto', sans-serif !important;
+     font-weight: 900;
+     font-size: 22px;
+     color: black;
+ }
+ 
+ ion-button {
+     color: white;
+ }
