@@ -49,6 +49,12 @@ export class TestimonybankPage implements OnInit {
   runFunc(){
     //alert(this.testtype);
     //this.testimonies = this.testtype;
+    if(this.testtype=="")
+    {
+      this.testimonies = "";
+      return;
+    }
+
     this.url = 'https://cccgtestimonies.azurewebsites.net/testimony?type=' + this.testtype;
     
     this.http.get(this.url).subscribe((response) => {

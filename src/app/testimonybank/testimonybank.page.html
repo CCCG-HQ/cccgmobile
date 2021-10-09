@@ -20,16 +20,9 @@
 
   <form>
     <ion-item lines="full">
-      <ion-label position="floating">Testimony Type:</ion-label>
-      <ion-select value="" name="testimonytypes" [(ngModel)]="testtype"  (ionChange)="runFunc()" okText="Okay" cancelText="Dismiss">
-        <ion-select-option value="acad">Academic Success</ion-select-option>
-        <ion-select-option value="deliverance">Deliverance</ion-select-option>
-        <ion-select-option value="finebreak">Finances</ion-select-option>
-        <ion-select-option value="favor">Favor</ion-select-option>
-        <ion-select-option value="healing">Healing</ion-select-option>
-      </ion-select>
+      <ion-label position="floating">Search for testimonies involving:</ion-label>
+      <ion-input placeholder="Search phrase e.g. healing" name="testimonytypes" [(ngModel)]="testtype"  (ionChange)="runFunc()" ></ion-input>
     </ion-item>
-
     <ion-item lines="none">
       <ion-label position="floating">Testimonies:</ion-label>
       <br>
