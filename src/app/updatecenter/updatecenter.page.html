@@ -1,0 +1,28 @@
+<ion-header translucent="true">
+  <ion-toolbar>
+      <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+  <div *ngIf="dataload">
+        <ion-list>
+          <ion-list-header>CCCG Updates</ion-list-header>
+          <p style="padding-left: 20px;">Please check here for our latest announcements and events!</p>
+        <ion-item *ngFor="let update of database.updates" lines="none">
+            <ion-card (click)="openWebPage(update.link)">
+              <img [src]="update.image" style="object-fit: fill;" />
+              <ion-card-title>{{ update.title }}</ion-card-title>
+              <ion-card-content>
+                {{update.description}}
+              </ion-card-content>
+            </ion-card>
+          </ion-item>
+          <br />
+          <br />
+          <br />
+        </ion-list>
+  </div>
+</ion-content>

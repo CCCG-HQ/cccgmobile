@@ -49,6 +49,10 @@ const routes: Routes = [
   {
     path: 'testimonybank',
     loadChildren: () => import('./testimonybank/testimonybank.module').then( m => m.TestimonybankPageModule)
+  },
+  {
+    path: 'updatecenter',
+    loadChildren: () => import('./updatecenter/updatecenter.module').then( m => m.UpdatecenterPageModule)
   }
 ];
 @NgModule({

@@ -51,7 +51,7 @@
       <ion-text color="white">
         <div *ngIf="database.liveVideo.count==1">
           <ion-list>    
-            <h3 style="padding-left: 10px;">We are Live right now!</h3>
+            <h3 style="padding-left: 10px;" color="purple">We are Live right now!</h3>
             <ion-item lines="none">
                 <ion-card (click)="itemTapped(database.liveVideo.videoId, database.liveVideo.videoTitle,database.liveVideo.videoPub)">
                   <img [src]="database.liveVideo.videoImg" style="object-fit: fill;" />
@@ -61,7 +61,7 @@
         </div>
         <div *ngIf="database.latestVideo.count==1 && database.liveVideo.count==0">
           <ion-list>    
-            <h3 class="ion-padding-start">Watch our Latest Service</h3>
+            <h3 class="ion-padding-start-v2">Watch our Latest Service</h3>
             <ion-item lines="none">
                 <ion-card (click)="itemTapped(database.latestVideo.videoId, database.latestVideo.videoTitle,database.latestVideo.videoPub)">
                   <img [src]="database.latestVideo.videoImg" style="object-fit: fill;" />
@@ -71,7 +71,7 @@
         </div>
       </ion-text>
       <ion-text color="white">
-        <h3 class="ion-padding-start">Listen to our latest Podcast Episode</h3>
+        <h3 class="ion-padding-start-v2">Listen to our latest Podcast Episode</h3>
         <br>
       </ion-text>
       <iframe class="ion-padding-start" src="https://open.spotify.com/embed/show/0sj3zVfd8YfWSKgiXujitn?theme=0" 
