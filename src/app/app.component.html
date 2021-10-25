@@ -53,7 +53,7 @@
           </ion-menu-toggle>
 
           <ion-menu-toggle autoHide="false">
-            <ion-item routerLink="/ride" routerLinkActive="active" routerDirection="root" detail="false">
+            <ion-item (click)="openWebPage('https://www.cccghq.org/riderequest')">
               <ion-icon slot="start" name="car" color="purple"></ion-icon>
               <ion-label>
                 Request a Ride
@@ -71,7 +71,7 @@
           </ion-menu-toggle>
 
           <ion-menu-toggle autoHide="false">
-            <ion-item (click)="goToTestimonies()">
+            <ion-item (click)="openWebPage('https://www.cccghq.org/testimonies')">
               <ion-icon slot="start" name="people" color="purple"></ion-icon>
               <ion-label>
                 Submit a Testimony!
@@ -93,6 +93,15 @@
               <ion-icon slot="start" name="briefcase" color="purple"></ion-icon>
               <ion-label>
                 The Testimony Bank!
+              </ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+
+          <ion-menu-toggle autoHide="false">
+            <ion-item (click)="openWebPage('https://www.cccghq.org/golden-nugget')">
+              <ion-icon slot="start" name="basket" color="purple"></ion-icon>
+              <ion-label>
+                The Nuggets Blog!
               </ion-label>
             </ion-item>
           </ion-menu-toggle>

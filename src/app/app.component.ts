@@ -39,7 +39,7 @@ export class AppComponent implements OnInit {
       location: 'no'
     }
 
-    const browser = this.inAppBrowser.create(url, '_blank', options);
+    const browser = this.inAppBrowser.create(url, '_self', options);
   }
 
   async ngOnInit() {

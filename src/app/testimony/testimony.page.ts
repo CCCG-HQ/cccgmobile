@@ -107,7 +107,7 @@ export class TestimonyPage implements OnInit {
 
       + body + 
 
-      "&charset=&charsetBodyHtml=&charsetBodyText=&encodingType=4&template=&headers_firstname=firstname: myValueHere&postBack=&merge_firstname=John&timeOffSetMinutes=&poolName=My Custom Pool&isTransactional=false&attachments=&trackOpens=true&trackClicks=true&utmSource=source1&utmMedium=medium1&utmCampaign=campaign1&utmContent=content1&bodyAmp=&charsetBodyAmp=";
+      "&charset=&charsetBodyHtml=&charsetBodyText=&encodingType=0&template=&headers_firstname=firstname: myValueHere&postBack=&merge_firstname=John&timeOffSetMinutes=&poolName=My Custom Pool&isTransactional=false&attachments=&trackOpens=true&trackClicks=true&utmSource=source1&utmMedium=medium1&utmCampaign=campaign1&utmContent=content1&bodyAmp=&charsetBodyAmp=";
     
       //console.log(this.url);
 
@@ -131,7 +131,11 @@ export class TestimonyPage implements OnInit {
 
     return new Promise((resolve, reject) => {
 
-     // this.http.setDataSerializer('json');
+      this.http.setDataSerializer('urlencoded');
+
+      this.url = encodeURI(this.url);
+
+      console.log(this.url);
 
       this.http.post(this.url, {}, {}).then(res =>{
         this.presentAlert();
